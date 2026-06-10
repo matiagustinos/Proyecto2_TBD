@@ -1,14 +1,10 @@
-# main.py
 
 from fastapi import FastAPI
 
 from database import Base, engine
 import models
 
-from routers import usuarios
-# from routers import restaurantes
-# from routers import items_menu
-# from routers import ordenes
+from routers import usuarios, restaurantes, items_menu, ordenes
 
 
 app = FastAPI(
@@ -18,7 +14,7 @@ app = FastAPI(
 )
 
 
-Base.metadata.create_all(bind=engine)
+Base.metadata.create_all(engine)
 
 
 @app.get("/")
@@ -28,6 +24,6 @@ def inicio():
 
 # ROUTERS
 app.include_router(usuarios.router)
-# app.include_router(restaurantes.router)
-# app.include_router(items_menu.router)
-# app.include_router(ordenes.router)
+app.include_router(restaurantes.router)
+app.include_router(items_menu.router)
+app.include_router(ordenes.router)
