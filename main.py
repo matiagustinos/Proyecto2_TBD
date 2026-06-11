@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from database import Base, engine
 import models
 
-from routers import usuarios, restaurantes, items_menu, ordenes
+from routers import usuarios, restaurantes, items_menu, ordenes, auth
 
 
 app = FastAPI(
@@ -27,3 +27,4 @@ app.include_router(usuarios.router)
 app.include_router(restaurantes.router)
 app.include_router(items_menu.router)
 app.include_router(ordenes.router)
+app.include_router(auth.router)

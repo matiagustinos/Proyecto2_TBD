@@ -1,0 +1,38 @@
+{
+  "id": "09a6684c-3183-4f87-94ed-24b0d219e238",
+  "nombre_completo": "Administrador Sistema",
+  "nombre_usuario": "admin",
+  "email": "admin@test.com",
+  "telefono": "999999999",
+  "direccion": "Dirección admin",
+  "rol": "admin",
+  "categoria_cliente": "sin_categoria",
+  "ultimo_acceso": null,
+  "fecha_creacion": "2026-06-10T22:28:03.745699"
+}
+
+{
+  "id": "551607f8-7d8a-4523-8511-cd9e31cf1f24",
+  "nombre_completo": "Dueño Restaurante",
+  "nombre_usuario": "dueno1",
+  "email": "dueno@test.com",
+  "telefono": "988888888",
+  "direccion": "Dirección dueño",
+  "rol": "restaurant_owner",
+  "categoria_cliente": "sin_categoria",
+  "ultimo_acceso": null,
+  "fecha_creacion": "2026-06-10T22:28:45.708548"
+}
+
+{
+  "id": "b8cce868-20b2-4719-9981-efd3d0a889a2",
+  "nombre_completo": "Cliente Prueba",
+  "nombre_usuario": "cliente1",
+  "email": "cliente@test.com",
+  "telefono": "977777777",
+  "direccion": "Av. Colón 123",
+  "rol": "client",
+  "categoria_cliente": "sin_categoria",
+  "ultimo_acceso": null,
+  "fecha_creacion": "2026-06-10T22:29:09.549580"
+}

@@ -9,6 +9,7 @@ from sqlalchemy.orm import Session
 import models
 from database import get_db
 from schemas.usuario import UsuarioCreate, UsuarioRead, UsuarioUpdate
+from security import hashear_password
 
 
 router = APIRouter(prefix="/usuarios", tags=["Usuarios"])
@@ -53,7 +54,7 @@ async def crear_usuario(data: UsuarioCreate, db: Session = Depends(get_db)):
 
     nuevo = models.Usuario(
         **datos,
-        contrasena_hash=password
+        contrasena_hash=hashear_password(password)
     )
 
     db.add(nuevo)
@@ -77,7 +78,7 @@ async def actualizar_usuario(
     datos = data.model_dump(exclude_unset=True)
 
     if "password" in datos:
-        usuario.contrasena_hash = datos.pop("password")
+        usuario.contrasena_hash = hashear_password(datos.pop("password"))
 
     for campo, valor in datos.items():
         setattr(usuario, campo, valor)

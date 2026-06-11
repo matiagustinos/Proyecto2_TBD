@@ -48,11 +48,6 @@ class UsuarioUpdate(BaseModel):
     categoria_cliente: Optional[CategoriaCliente] = None
 
 
-class UsuarioLogin(BaseModel):
-    nombre_usuario: str
-    password: str
-
-
 class Token(BaseModel):
     access_token: str
     token_type: str
